@@ -98,7 +98,8 @@ class Siswa extends CI_Controller {
 					echo "error";
 	    	}
 			}else {
-				echo "error";
+				$this->session->set_flashdata('info', 'Harus memasukan foto');
+				redirect('admin/siswa/input');
 			}
 		}
 			
